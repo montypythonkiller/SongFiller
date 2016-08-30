@@ -1,0 +1,11 @@
+pip and default:
+
+mutagen
+os, sys
+requests
+eyed3
+xml ElementTree
+
+manual download:
+
+acoustid + chromeid
