@@ -3,10 +3,6 @@
 
 
 '''Bugs to solve
-
-    locating and iterating through multiple files
-
-
     adding album cover art // half-assedly done
 
 
