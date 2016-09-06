@@ -2,4 +2,6 @@ SongFiller is a python program made to update metadata of a mp3 file like title,
 
 To use:
 
-        python songfiller.py {path/to/mp3file1.mp3} {path/to/mp3file2.mp3} ......
+        python songfiller.py 
+
+Then enter either path to a mp3 file or a directory with multiple files.
