@@ -31,9 +31,6 @@ import acoustid
 #request for api, mutagen for id3 of a music file, elementtree for parsing xml, acoustid for fingerprinting
 
 
-#path to file
-path = sys.argv #path to the song
-
 
     
 
@@ -87,7 +84,7 @@ def songFiller(path):
                 album = grandChild[1].text # rough hack may not work later. Current index 1 and 5 have album name and coverart respectively
                 image = grandChild[6].text
 
-
+    print "=============================================="
     print "Album:" , album
     print "Image:" , image
     print "Artist:" , artist
@@ -136,5 +133,30 @@ def songFiller(path):
 
     os.rename(path, newName)
 
-for i in range(len(path)-1):
-    songFiller(path[i+1])
+
+#path to file
+path = raw_input("Enter the directory or file(mp3) path:")
+if os.path.isfile(path):
+    print "Single file to be filled @", path
+    songFiller(path)
+
+    
+
+elif os.path.isdir(path):
+    print "A whole directory has been selected."
+    files = os.listdir(path)
+    print files
+    for file in files:
+        filename, file_extension = os.path.splitext(file)
+        if file_extension == '.mp3':
+            file = path + file
+            songFiller(file)
+        
+
+
+else:
+    print "Sorry not a file or directory. Try again."
+    
+        
+
+
