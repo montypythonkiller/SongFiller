@@ -1,5 +1,4 @@
 mutagen
-os, sys
 requests
 xml ElementTree
 acoustid + chromeid
